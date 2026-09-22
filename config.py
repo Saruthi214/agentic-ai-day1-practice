@@ -2,7 +2,7 @@
 
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import Groq
 
 load_dotenv()
 
@@ -33,8 +33,7 @@ if not API_KEY:
         f"No API key found for PROVIDER={PROVIDER}. Check your .env file."
     )
 
-client = OpenAI(
-    base_url=BASE_URL,
+client = Groq(
     api_key=API_KEY
 )
 

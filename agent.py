@@ -32,11 +32,15 @@ def agent(question, max_steps=6, verbose=True):
 
         # 1. REASON: ask the LLM what to do next
         response = client.chat.completions.create(
-            model=MODEL,
-            messages=messages,
-            tools=TOOLS,
-            temperature=0
-        )
+    model=MODEL,
+    messages=messages,
+    tools=TOOLS,
+    temperature=0,
+    extra_body={
+        "disable_tool_validation": True
+    }
+)
+        
 
         message = response.choices[0].message
 
@@ -64,7 +68,7 @@ def agent(question, max_steps=6, verbose=True):
         # 3. ACT and OBSERVE
         for call in message.tool_calls:
 
-            name = call.function.name
+            name = call.function.name.split("<|channel|>")[0]
 
             arguments = json.loads(
                 call.function.arguments or "{}"
