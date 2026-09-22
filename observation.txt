@@ -1,0 +1,40 @@
+DAY 1 OBSERVATION TABLE
+=======================
+
+| Test / Observation | Chatbot | Workflow | Agent |
+|--------------------|---------|----------|-------|
+| Q1 correct?        |         |          |       |
+| Q2 correct?        |         |          |       |
+| Q3 correct?        |         |          |       |
+| Q4 handled well?   |         |          |       |
+| Challenge handled? |         |          |       |
+| Same output on repeat run? | | | |
+| Approx response time | | | |
+| Number of LLM calls per question | | | |
+| One strength | | | |
+| One weakness | | | |
+| Best suited use case | | | |
+
+
+AGENT TRACE — Q2
+================
+
+Step 1:
+Tool:
+Arguments:
+Observation:
+
+Step 2:
+Tool:
+Arguments:
+Observation:
+
+Step 3:
+Tool:
+Arguments:
+Observation:
+
+Step 4:
+Tool:
+Arguments:
+Observation:
